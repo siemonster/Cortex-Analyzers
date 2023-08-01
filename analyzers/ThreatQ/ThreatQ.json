@@ -1,0 +1,43 @@
+{
+  "name": "ThreatQ",
+  "license": "MIT",
+  "author": "ThreatQuotient",
+  "url": "https://www.threatq.com",
+  "version": "1.0.1",
+  "description": "Enrich observables from ThreatQ data.",
+  "dataTypeList": ["domain", "ip", "url", "fqdn", "uri_path","user-agent", "hash", "email", "mail", "mail_subject", "registry", "regexp", "other", "filename"],
+  "command": "ThreatQ/ThreatQ.py",
+  "baseConfig": "ThreatQ",
+  "configurationItems": [
+    {
+      "name": "tq_host",
+      "description": "URL of the ThreatQ Instance",
+      "type": "string",
+      "multi": false,
+      "required": true,
+      "defaultValue": ""
+    },
+    {
+      "name": "tq_client_id",
+      "description": "ThreatQ OAuth Client ID",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "tq_client_secret",
+      "description": "ThreatQ OAuth Client Secret",
+      "type": "string",
+      "multi": false,
+      "required": true
+    },
+    {
+      "name": "tq_verify",
+      "description": "Verify ThreatQ SSL Certificate",
+      "type": "boolean",
+      "multi": false,
+      "required": false,
+      "defaultValue": false
+    }
+  ]
+}
